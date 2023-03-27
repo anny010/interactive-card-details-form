@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="styles.css">
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+       <title>interactive card details form</title>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="background">
+                <div class="cards">
+                    <div class="backside">
+                        <p class="backp" id="backp" type="number" placeholder="000"></p>
+                    </div>
+                    <div class="frontside">
+                       <img src="./assets/Group 8 (2).svg" class="cirlce">
+                       <div class="number">
+                        <span id="card-number" max-length="16">0000 0000 0000 0000</span>
+                       </div>
+                       <div class="info">
+                        <span id="name">JANE APPLESEED</span>
+                        <span class="date">
+                            <span id="card-month">00</span>
+                             /                         
+                           <span id="card-year">00</span>
+                           </span>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <div class="card-info" id="cardinfo">
+                    <div class="cardholder-name">
+                        <span>CARDHOLDER NAME</span>
+                        <input type="text" id="card-owner" class="card-owner" maxlength="22" placeholder="e.g. Jane Appleseed"  onkeypress="return event.charCode < 48 || event.charCode > 57"oninput="this.value = this.value.toUpperCase()"></input>
+                    </div>
+                    <div class="number-card">
+                        <span>CARD NUMBER</span>
+                        <input class="card-owner" id="cardnum"type="number" placeholder="e.g. 1234 5678 9123 0000"
+                        oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); if(parseInt(this.value) < 12) this.style.borderColor = 'red'; else this.style.borderColor = '';" minlength="16" maxlength="16">
+                    </input>
+                    </div>
+                    <div class="exp-date">
+                        <span class="expiration">Exp. Date (MM/YY)</span>
+                        <span class="cvv">CVC</span>
+                        <div class="month-yaer">
+                        <input class="month" id="month"placeholder="MM" type="number" min="1" max="12" oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);if(parseInt(this.value) > 12) this.style.borderColor = 'red'; else this.style.borderColor = '';" ></input>
+                        <input class="year" id="year" placeholder="YY" type="number" min="1" max="35" oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2); if(parseInt(this.value) > 35) this.style.borderColor = 'red'; else this.style.borderColor = '';"></input>
+                        <input class="cvc" id="cvc" placeholder="e.g. 123" type="number" min="000" max="999" maxlength="3" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);if(parseInt(this.value) < 0) this.style.borderColor = 'red'; else this.style.borderColor = '';"></input>
+                        </div>
+                    </div>
+                    <button class="confirm" id="confirm" value="submit">Confirm</button>
+                </div>
+            </form>
+
+            <div class="thankyou" id="thankyou">
+                <img src="./assets/icon-complete.svg">
+                <div class="thanks">
+                    <h1>THANK YOU!</h1>
+                    <p>We’ve added your card details</p>
+                </div>
+                <button class="confirm" id="continue">Continue</button>
+            </div>
+        </div> 
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    text-align: center;
+    background-image: url(./assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 29.042vh;;
+}
+.background{
+    display: flex;
+    justify-content: center;
+}
+.backside{
+    background-image: url(./assets/bg-card-back.png);
+    background-repeat: no-repeat;
+    height: 157px;
+    width: 286px;
+    background-size: cover;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+.backp{
+    width: 234px;
+    height: 24px;
+    border: none;
+    background-color:  rgba(173, 181, 190, 1);
+    color:  rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: right;
+    align-items: center;
+    text-align: right;
+    margin: auto;
+    transform: translateY(64.7px);
+    border-radius: 4px;
+    padding: 3px;
+}
+.frontside{
+    background-image: url(./assets/bg-card-front.png);
+    background-repeat: no-repeat;
+    width: 286px;
+    height: 157px;
+    border-radius: 6px;
+    border-radius: 6px;
+    margin-top: -67.5px;
+}
+.number{
+    margin-top: 35px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+.info{
+    font-Weight:500;
+    font-Size:9px;
+    line-height:11.48px;
+    letter-spacing: 1.29px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 17px;
+    display: flex;
+    padding: 0px 15px;
+    justify-content: space-between;
+}
+.frontside img{
+    display: flex;
+    padding: 17px 0px 0px 17px;
+}
+.cardholder-name span{
+    font-size: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(33, 9, 47, 1);
+}
+.cardholder-name{
+    display: flex;
+    flex-direction: column;
+}
+.card-owner{
+    border-radius: 8px;
+    border:1px solid rgb(223, 222, 224);
+    width: 327px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Space Grotesk';
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    outline: none;
+}
+.number-card span{
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(33, 9, 47, 1);
+}
+.number-card{
+    display: flex;
+    flex-direction: column;
+}
+.card-info{
+    text-align: left;
+    padding: 80px 24px 50px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.month, .year{
+    width: 72px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid rgb(223, 222, 224);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Space Grotesk';
+    padding-left: 15px;
+    outline: none;
+}
+.expiration{
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(33, 9, 47, 1);
+}
+.month-yaer{
+    margin-top: 10px;
+}
+.cvv{
+    margin-left: 25px;
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgba(33, 9, 47, 1);
+    outline: none;
+}
+.cvc{
+    width: 164px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid rgb(223, 222, 224);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Space Grotesk';
+    margin-left: 10px;
+    padding-left: 15px;
+    outline: none;
+}
+.confirm{
+    width: 327px;
+    height: 53px;
+    background-color: rgba(33, 9, 47, 1);
+    border-radius: 8px;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Space Grotesk';
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+.thanks h1{
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 3.42px;
+    color: rgba(33, 9, 47, 1);
+    font-family: 'Space Grotesk';
+}
+.thanks p{
+    color:  rgba(143, 134, 148, 1);
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+.thankyou img{
+    margin-bottom: 35px;
+}
+.thankyou{
+    margin-top: 100px;
+    display: none;
+}
+#card-number{
+    text-align: left;
+}
+
+    
+@media screen and (min-width:1200px){
+    .frontside{
+        width: 447px;
+        height: 245px;
+        margin-left: -270px;
+        margin-top: -120px;
+    }
+    .number span{
+        font-size: 28px;
+        letter-spacing: 3.42px;
+    }
+    .info span{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .frontside img{
+        width: 84px;
+        height: 47px;
+    }
+    .backside{
+        width: 447px;
+        height: 245px;
+        transform: translate(-220px, 400px);
+    }
+    .backp{
+        width: 354px;
+        height: 36px;
+        margin: auto;
+        transform: translateY(102px);
+    }
+    body{
+        background-image: url(./assets/Group\ 10\ \(1\).svg);
+        background-repeat: no-repeat;
+        background-size: 33.5vw 200vh;
+        background-position: left;
+        overflow: hidden;
+    }
+    .card-info{
+       transform: translate(290px,-250px);
+    }
+    .info{
+        margin-top: 60px;
+        margin-left: 20px;
+    }
+    .card-owner{
+        width: 381px;
+    }
+    .month{
+        width: 82px;
+    }
+    .year{
+        width: 82px;
+    }
+    .cvc{
+        width: 196px;
+    }
+    .confirm{
+        width: 381px;
+    }
+    .thankyou{
+        transform: translate(270px, -300px);
+    }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      appearance: textfield;
+    }
+}
